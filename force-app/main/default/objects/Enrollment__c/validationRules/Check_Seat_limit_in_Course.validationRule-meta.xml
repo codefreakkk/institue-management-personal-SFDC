@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Seat_limit_in_Course</fullName>
+    <active>true</active>
+    <errorConditionFormula>Course__r.Current_Enrollment_Count__c &gt;=  Course__r.Total_Seats__c</errorConditionFormula>
+    <errorMessage>The enrollment in a course should not exceed the number of
+seats in a course.</errorMessage>
+</ValidationRule>
