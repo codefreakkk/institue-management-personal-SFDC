@@ -1,0 +1,22 @@
+<template>
+    <lightning-card>
+        <div class="slds-p-bottom_small slds-grid slds-grid_align-spread">
+            <p style="margin: auto 15px;"><b>Total Records: {timetableDataCount}</b> 
+            </p>
+            <div class="slds-grid" style="margin-right: 15px;">
+                <lightning-input type="search" placeholder="Search" onchange={handleSearchChange} ></lightning-input>
+                <lightning-button label="Search"  onclick={handleSearch} class="slds-p-left_small" style="margin-top:auto;"></lightning-button>
+                <lightning-button label="New" onclick={handleNew} class="slds-p-left_small" style="margin-top:auto;"></lightning-button>
+            </div>  
+        </div>
+
+        <!-- data table -->
+        <div lwc:if={timetableData}> 
+            <lightning-datatable
+                key-field="id"
+                data={timetableData}
+                columns={timetableColumns}>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>
