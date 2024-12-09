@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Related Records">
+        <lightning-datatable title="contacts" key-field="Id" data={contacts} columns={contactColumns} hide-checkbox-column>
+        </lightning-datatable><br>
+        <lightning-datatable title="opportunity" key-field="Id" data={opportunities} columns={opportunityColumns} hide-checkbox-column>
+        </lightning-datatable><br>
+        <lightning-datatable title="cases" key-field="Id" data={cases} columns={caseColumns} hide-checkbox-column>
+        </lightning-datatable>
+    </lightning-card>
+</template>
