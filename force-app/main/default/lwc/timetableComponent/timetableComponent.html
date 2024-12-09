@@ -1,0 +1,31 @@
+<template>
+    <div style="height: 90vh; background-color: #f3f3f3; padding: 15px 0;">
+        <div class="slds-p-bottom_small slds-grid slds-grid_align-spread">
+            <div class="slds-text-heading_medium" style="margin: auto 15px;">
+                <b>
+                    Total Records: {timetableDataCount}
+                </b>
+            </div> 
+            <div class="slds-grid" style="margin-right: 15px;">
+                <lightning-input label="Date" type="date" class="slds-p-right_xx-small" onchange={handleDate} ></lightning-input>
+                <lightning-combobox label="Slot" class="slds-p-right_xx-small" value={slot} options={slotOptions} onchange={handleSlotChange}></lightning-combobox>
+                <lightning-combobox label="Subject" class="slds-p-right_xx-small" value={subjects} options={subjectOptions} onchange={handleSubjectChange}></lightning-combobox>
+                <lightning-button label="Search"  onclick={handleSearch} class="slds-p-left_small" style="margin-top:auto;"></lightning-button>
+                <lightning-button label="New" onclick={handleNew} class="slds-p-left_small" style="margin-top:auto;"></lightning-button>
+            </div>  
+        </div>
+
+    <div>
+        <!-- data table -->
+        <div lwc:if={timetableData}> 
+            <lightning-datatable
+                key-field="id"
+                data={timetableData}
+                columns={timetableColumns}
+                onrowaction={handleTimetableRowAction}
+                >
+            </lightning-datatable>
+        </div>
+    </div>
+</div>
+</template>

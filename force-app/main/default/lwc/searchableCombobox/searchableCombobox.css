@@ -1,0 +1,29 @@
+.combo-box-container {
+    position: relative;
+    width: 300px;
+}
+ 
+.dropdown {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #dcdcdc;
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+}
+ 
+.dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+ 
+.dropdown li {
+    padding: 8px;
+    cursor: pointer;
+}
+ 
+.dropdown li:hover {
+    background-color: #f0f0f0;
+}
